@@ -47,7 +47,7 @@ export default function Services() {
     <section id="services" className="bg-[color:var(--paper)] py-24 sm:py-32">
       <Container>
         <SectionHeading
-          index="02"
+          index="03"
           eyebrow="Services"
           title="A complete revenue cycle, handled."
           description="Six operational pillars across the billing workflow. We can take all of them, or only the parts where your team needs the help."

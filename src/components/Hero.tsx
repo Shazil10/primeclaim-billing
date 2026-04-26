@@ -1,15 +1,31 @@
 import Container from "./Container";
 import { ArrowRight } from "./icons";
 
+const TERMS = [
+  {
+    label: "Net collections",
+    body: "Never on gross billed charges.",
+  },
+  {
+    label: "No setup",
+    body: "No onboarding fees, no contract minimums.",
+  },
+  {
+    label: "Special scope",
+    body: "Old AR cleanup and recovery quoted separately.",
+  },
+];
+
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative bg-[color:var(--paper)] pt-16 sm:pt-24 lg:pt-32 pb-24 sm:pb-32"
+      className="relative bg-[color:var(--paper)] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24"
     >
       <Container>
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-          <div className="lg:col-span-8">
+        {/* Top row: headline + intro on the left, CTAs */}
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+          <div className="lg:col-span-7">
             <div className="flex items-center gap-3">
               <span className="numeral text-[color:var(--ink-soft)] text-sm">
                 01
@@ -19,7 +35,7 @@ export default function Hero() {
             </div>
 
             <h1
-              className="font-display mt-8 text-[2.65rem] sm:text-[3.6rem] lg:text-[4.6rem] leading-[1.02] text-[color:var(--ink)] tracking-[-0.02em]"
+              className="font-display mt-8 text-[2.65rem] sm:text-[3.6rem] lg:text-[4.4rem] leading-[1.02] text-[color:var(--ink)] tracking-[-0.02em]"
               style={{ fontWeight: 400 }}
             >
               Medical billing,{" "}
@@ -58,23 +74,56 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="lg:col-span-4">
-            <div className="border-t border-[color:var(--accent)]/35 pt-7">
-              <p className="eyebrow">Performance-aligned</p>
-              <p
-                className="font-display mt-3 text-[3.4rem] sm:text-[4rem] leading-none text-[color:var(--accent-deep)] numeral"
-                style={{ fontWeight: 400 }}
-              >
-                96.5
-                <span className="text-[color:var(--accent)]/55">%</span>
-              </p>
-              <p className="mt-2 text-[15px] leading-[1.55] text-[color:var(--ink-muted)] max-w-[18rem]">
-                of every dollar collected stays with your practice. We charge
-                a flat <span className="text-[color:var(--ink)]">3.5%</span> on
-                net collections, and nothing on what we don&apos;t collect.
-              </p>
+          {/* Pricing block: number + sentence + terms */}
+          <aside
+            id="pricing"
+            className="lg:col-span-5 lg:pl-8 lg:border-l lg:border-[color:var(--accent)]/20 scroll-mt-24"
+          >
+            <div className="flex items-center gap-3">
+              <span className="numeral text-[color:var(--ink-soft)] text-sm">
+                02
+              </span>
+              <span className="h-px w-8 bg-[color:var(--accent)]/45" />
+              <span className="eyebrow">Performance-aligned</span>
             </div>
-          </div>
+
+            <p
+              className="font-display numeral mt-5 text-[6.5rem] sm:text-[8.5rem] lg:text-[10.5rem] leading-[0.85] text-[color:var(--accent-deep)] tracking-[-0.04em]"
+              style={{ fontWeight: 300 }}
+            >
+              96.5
+              <span className="text-[color:var(--accent)]/50">%</span>
+            </p>
+
+            <p className="mt-5 max-w-md text-[15.5px] leading-[1.7] text-[color:var(--ink-muted)]">
+              of every dollar collected stays with your practice. We charge
+              a flat{" "}
+              <span className="text-[color:var(--ink)] font-medium">
+                3.5%
+              </span>{" "}
+              on net collections, and nothing on what we don&apos;t collect.
+            </p>
+
+            <ul className="mt-8 border-t border-[color:var(--accent)]/20">
+              {TERMS.map((term) => (
+                <li
+                  key={term.label}
+                  className="grid grid-cols-12 gap-3 border-b border-[color:var(--hairline-strong)]/70 py-4"
+                >
+                  <span className="eyebrow col-span-12 sm:col-span-5 pt-0.5">
+                    {term.label}
+                  </span>
+                  <p className="col-span-12 sm:col-span-7 text-[13.5px] leading-[1.6] text-[color:var(--ink-muted)]">
+                    {term.body}
+                  </p>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-5 text-[12.5px] text-[color:var(--ink-soft)] italic">
+              Pricing is confirmed in writing before any work begins.
+            </p>
+          </aside>
         </div>
       </Container>
     </section>

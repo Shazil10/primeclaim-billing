@@ -33,7 +33,7 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="bg-[color:var(--paper)] py-24 sm:py-32"
+      className="bg-[color:var(--paper-deep)] py-24 sm:py-32 border-y border-[color:var(--hairline)]"
     >
       <Container>
         <SectionHeading
