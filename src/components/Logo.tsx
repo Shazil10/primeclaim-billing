@@ -1,39 +1,36 @@
-import Image from "next/image";
-
 interface LogoProps {
   className?: string;
-  variant?: "full" | "mark";
-  priority?: boolean;
+  inline?: boolean;
 }
 
-export default function Logo({
-  className = "h-9 w-auto",
-  variant = "full",
-  priority = false,
-}: LogoProps) {
-  // The user-supplied logo (if any) is expected at /primeclaim-logo.png.
-  // We fall back to the SVG variants otherwise.
-  if (variant === "mark") {
-    return (
-      <Image
-        src="/primeclaim-mark.svg"
-        alt="PrimeClaim Billing"
-        width={80}
-        height={80}
-        className={className}
-        priority={priority}
-      />
-    );
-  }
-
+/**
+ * Typographic wordmark — uses the loaded display serif (Fraunces).
+ * No gradient mark, no icon. Refined, editorial, calm.
+ */
+export default function Logo({ className = "", inline = false }: LogoProps) {
   return (
-    <Image
-      src="/primeclaim-logo.svg"
-      alt="PrimeClaim Billing"
-      width={360}
-      height={80}
-      className={className}
-      priority={priority}
-    />
+    <span
+      className={`inline-flex items-baseline gap-2 ${className}`}
+      aria-label="PrimeClaim Billing"
+    >
+      <span
+        className="font-display text-[1.35rem] sm:text-[1.45rem] leading-none text-[color:var(--ink)] tracking-tight"
+        style={{ fontWeight: 500, fontStyle: "italic" }}
+      >
+        PrimeClaim
+      </span>
+      {!inline && (
+        <span
+          aria-hidden
+          className="hidden sm:inline-block h-[1px] w-4 bg-[color:var(--hairline-strong)] translate-y-[-4px]"
+        />
+      )}
+      <span
+        className="text-[0.62rem] uppercase tracking-[0.32em] text-[color:var(--ink-muted)] leading-none"
+        style={{ fontWeight: 500 }}
+      >
+        Billing
+      </span>
+    </span>
   );
 }

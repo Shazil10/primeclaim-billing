@@ -4,26 +4,21 @@ Production-ready landing page for **PrimeClaim Billing**, a U.S. medical billing
 
 Built with **Next.js (App Router) + TypeScript + Tailwind CSS v4**, designed to deploy on **Vercel**.
 
+Designed in the *brand* register following the [Impeccable](https://impeccable.style) design philosophy: editorial typography, restrained palette, generous whitespace, no AI-slop anti-patterns (no purple gradients, no nested cards, no fake KPI dashboards, no Inter-everywhere, no gradient text).
+
 ---
 
-## Features
+## Sections (in order)
 
-- Clean, trust-first B2B healthcare design (navy + slate corporate palette)
-- Sticky header with mobile menu
-- Hero with revenue cycle snapshot card
-- Trust / problem statement
-- End-to-end services grid
-- Performance-aligned pricing card + responsive pricing table
-- Six-step process
-- Specialties (Dental, PT, Mental Health, Primary Care, Chiropractic, Specialty)
-- "Why us" cards
-- FAQ (`<details>` accordion, accessible by default)
-- Contact CTA with `mailto:` actions
-- Footer with logo, links, contact, copyright
-- SEO metadata (title, description, OpenGraph, Twitter)
-- SVG favicon
-- Mobile-first responsive
-- Semantic headings, alt text, focus rings, good contrast
+1. **Header** — typographic wordmark, light nav, single text-link CTA
+2. **Hero** — display headline + the **96.5%** pricing pull-quote
+3. **Services** — six pillars as a numbered editorial list (no card grid)
+4. **Pricing** — "You keep 96.5%." centerpiece (3.5% on net collections)
+5. **Process** — four distilled steps
+6. **Specialties** — single editorial line of names
+7. **FAQ** — three essential questions, refined accordion
+8. **Contact** — quiet final spread; email rendered in display type
+9. **Footer** — minimal single line
 
 ## Tech stack
 
@@ -31,8 +26,7 @@ Built with **Next.js (App Router) + TypeScript + Tailwind CSS v4**, designed to 
 - React 19
 - TypeScript
 - Tailwind CSS v4
-- `next/image` for the logo
-- `next/font/google` for Inter
+- `next/font/google` — **Fraunces** (display) + **Instrument Sans** (body)
 
 ## Project structure
 
@@ -41,28 +35,42 @@ src/
   app/
     layout.tsx        # Root layout, fonts, metadata
     page.tsx          # Landing page composition
-    globals.css       # Tailwind + brand CSS variables
+    globals.css       # Tailwind + brand tokens (paper / ink / hairline / accent)
   components/
     Header.tsx
     Hero.tsx
-    TrustSection.tsx
     Services.tsx
     Pricing.tsx
     Process.tsx
     Specialties.tsx
-    WhyUs.tsx
     FAQ.tsx
     Contact.tsx
     Footer.tsx
-    Logo.tsx          # Reusable logo (full + mark variants)
+    Logo.tsx          # Typographic wordmark (no SVG mark)
     Container.tsx     # Standard page-width wrapper
     SectionHeading.tsx
-    icons.tsx         # Inline SVG icon set
 public/
-  primeclaim-logo.svg # Wordmark logo (used in header + footer)
-  primeclaim-mark.svg # Square mark variant
   favicon.svg
 ```
+
+## Design tokens
+
+```
+--paper:           #F4F0E8   (warm paper background)
+--paper-deep:      #ECE6D8   (alternating section background)
+--ivory:           #FBF8F1   (subtle hover wash)
+--ink:             #141312   (primary text)
+--ink-muted:       #5B5346   (secondary text)
+--ink-soft:        #8A8170   (tertiary / numerals)
+--hairline:        #E1D9C7   (light dividers)
+--hairline-strong: #C9BFA9   (heavier dividers)
+--accent:          #2A463D   (deep moss — used very sparingly)
+```
+
+Typography:
+
+- Display: **Fraunces** (variable serif), 300–500, italic for emphasis
+- Body: **Instrument Sans**, 400–500
 
 ## Local development
 
@@ -90,12 +98,12 @@ npm run lint
 
 ## Replacing the logo
 
-The site ships with a clean SVG wordmark at `public/primeclaim-logo.svg`. To use a custom logo:
+The current logo is **typographic** — it renders the actual loaded display serif (Fraunces) in `src/components/Logo.tsx`. Nothing to replace unless you want a custom wordmark.
 
-1. Drop your file into `public/` (e.g. `public/primeclaim-logo.png`).
-2. Open `src/components/Logo.tsx` and update the `src` and dimensions on the `<Image>` element.
+If you eventually want to use an image:
 
-The `Logo` component already uses `object-contain` and a fixed height so most aspect ratios will display cleanly without distortion.
+1. Drop the file into `public/` (e.g. `public/primeclaim-logo.png`).
+2. Replace the contents of `src/components/Logo.tsx` with a `next/image` `<Image>` element pointing at it. Use `object-contain` with a fixed height (e.g. `h-9`) so aspect ratios stay correct.
 
 ## Updating contact info
 

@@ -1,68 +1,35 @@
 import Logo from "./Logo";
 import Container from "./Container";
 
-const FOOTER_LINKS = [
-  { href: "#services", label: "Services" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#process", label: "Process" },
-  { href: "#contact", label: "Contact" },
-];
-
 export default function Footer() {
   return (
-    <footer className="border-t border-[color:var(--border)] bg-white">
-      <Container className="py-12">
-        <div className="grid gap-8 md:grid-cols-12 md:gap-10 items-start">
-          <div className="md:col-span-5">
-            <Logo className="h-9 w-auto object-contain" />
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">
-              Helping healthcare practices improve billing workflows, reduce
-              denials, and strengthen cash flow.
-            </p>
-          </div>
+    <footer className="bg-[color:var(--paper)] py-12 border-t border-[color:var(--hairline)]">
+      <Container>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <Logo />
 
-          <div className="md:col-span-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Explore
-            </p>
-            <ul className="mt-4 grid grid-cols-2 gap-y-2 gap-x-6">
-              {FOOTER_LINKS.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-slate-700 hover:text-[color:var(--accent)] transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="md:col-span-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-              Contact
-            </p>
-            <div className="mt-4 space-y-2 text-sm text-slate-700">
-              <a
-                href="mailto:info@primeclaimbilling.com"
-                className="block hover:text-[color:var(--accent)] transition-colors"
-              >
-                info@primeclaimbilling.com
-              </a>
-              <p>+1 (XXX) XXX-XXXX</p>
-              <p>primeclaimbilling.com</p>
-            </div>
+          <div className="flex flex-wrap items-center gap-x-7 gap-y-2 text-[13px] text-[color:var(--ink-muted)]">
+            <a href="#services" className="hover:text-[color:var(--ink)] transition-colors">
+              Services
+            </a>
+            <a href="#pricing" className="hover:text-[color:var(--ink)] transition-colors">
+              Pricing
+            </a>
+            <a href="#process" className="hover:text-[color:var(--ink)] transition-colors">
+              Process
+            </a>
+            <a
+              href="mailto:info@primeclaimbilling.com"
+              className="hover:text-[color:var(--ink)] transition-colors"
+            >
+              info@primeclaimbilling.com
+            </a>
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-[color:var(--border)] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <p className="text-xs text-slate-500">
-            © 2026 PrimeClaim Billing. All rights reserved.
-          </p>
-          <p className="text-xs text-slate-500">
-            Medical Billing &amp; Revenue Cycle Management
-          </p>
+        <div className="mt-8 pt-6 border-t border-[color:var(--hairline)] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-[12px] text-[color:var(--ink-soft)]">
+          <p>© 2026 PrimeClaim Billing. All rights reserved.</p>
+          <p className="italic">Medical billing &amp; revenue cycle management.</p>
         </div>
       </Container>
     </footer>

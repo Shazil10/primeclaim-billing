@@ -1,118 +1,81 @@
 import Container from "./Container";
-import { ArrowRightIcon, MailIcon, PhoneIcon } from "./icons";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 sm:py-24 bg-gradient-to-b from-white to-[color:var(--bg-soft)]"
+      className="bg-[color:var(--paper-deep)] py-28 sm:py-36 border-t border-[color:var(--hairline-strong)]"
     >
       <Container>
-        <div className="grid gap-8 lg:grid-cols-12 lg:gap-10 items-stretch">
-          {/* Copy + CTAs */}
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
           <div className="lg:col-span-7">
-            <span className="inline-block text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
-              Contact
-            </span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight text-[color:var(--navy-deep)]">
-              Ready to review your billing workflow?
-            </h2>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-600">
-              Contact PrimeClaim Billing to discuss your current billing
-              process, claim volume, and revenue cycle needs. We&apos;ll
-              respond within one business day.
-            </p>
-
-            <div className="mt-7 flex flex-col sm:flex-row gap-3">
-              <a
-                href="mailto:info@primeclaimbilling.com"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--navy)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[color:var(--navy-deep)] transition-colors"
-              >
-                <MailIcon className="h-4 w-4" />
-                Email Us
-              </a>
-              <a
-                href="mailto:info@primeclaimbilling.com?subject=Intro%20Call%20Request"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-[color:var(--border)] bg-white px-6 py-3 text-sm font-semibold text-[color:var(--navy-deep)] hover:border-[color:var(--accent)] hover:text-[color:var(--accent)] transition-colors"
-              >
-                Schedule a Call
-                <ArrowRightIcon className="h-4 w-4" />
-              </a>
+            <div className="flex items-center gap-3">
+              <span className="numeral text-[color:var(--ink-soft)] text-sm">
+                07
+              </span>
+              <span className="h-px w-8 bg-[color:var(--hairline-strong)]" />
+              <span className="eyebrow">Contact</span>
             </div>
 
-            <p className="mt-6 text-sm text-slate-500">
-              Prefer to write directly?{" "}
-              <a
-                href="mailto:info@primeclaimbilling.com"
-                className="font-medium text-[color:var(--accent)] hover:underline"
+            <h2
+              className="font-display mt-6 text-[2.3rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.05] text-[color:var(--ink)] tracking-[-0.02em]"
+              style={{ fontWeight: 400 }}
+            >
+              Tell us where billing is{" "}
+              <em className="italic text-[color:var(--accent)]" style={{ fontWeight: 400 }}>
+                slowing you down.
+              </em>
+            </h2>
+            <p className="mt-6 max-w-lg text-[1.02rem] leading-[1.7] text-[color:var(--ink-muted)]">
+              We&rsquo;ll respond within one business day. The first
+              conversation is short, specific, and free of charge.
+            </p>
+
+            <a
+              href="mailto:info@primeclaimbilling.com?subject=Intro%20call%20—%20PrimeClaim%20Billing"
+              className="mt-10 inline-flex items-baseline gap-3 group"
+            >
+              <span
+                className="font-display text-[1.5rem] sm:text-[2rem] lg:text-[2.4rem] text-[color:var(--ink)] border-b border-[color:var(--ink)] pb-1 group-hover:opacity-70 transition-opacity"
+                style={{ fontWeight: 400 }}
               >
                 info@primeclaimbilling.com
-              </a>
-            </p>
+              </span>
+              <span
+                aria-hidden
+                className="text-[color:var(--ink)] transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </a>
           </div>
 
-          {/* Contact card */}
           <div className="lg:col-span-5">
-            <div className="h-full rounded-2xl border border-[color:var(--border)] bg-white p-7 sm:p-8 shadow-[0_10px_30px_-12px_rgba(0,59,111,0.18)]">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                PrimeClaim Billing
-              </p>
-              <p className="mt-2 text-base font-medium text-[color:var(--navy-deep)]">
-                Medical Billing &amp; Revenue Cycle Management
-              </p>
-
-              <div className="mt-6 space-y-4">
-                <a
-                  href="mailto:info@primeclaimbilling.com"
-                  className="flex items-start gap-3 group"
-                >
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[color:var(--accent-soft)] text-[color:var(--navy)]">
-                    <MailIcon className="h-4 w-4" />
-                  </span>
-                  <div>
-                    <p className="text-xs uppercase tracking-wider text-slate-500">
-                      Email
-                    </p>
-                    <p className="text-sm font-medium text-[color:var(--navy-deep)] group-hover:text-[color:var(--accent)] transition-colors">
-                      info@primeclaimbilling.com
-                    </p>
-                  </div>
-                </a>
-
-                <div className="flex items-start gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[color:var(--accent-soft)] text-[color:var(--navy)]">
-                    <PhoneIcon className="h-4 w-4" />
-                  </span>
-                  <div>
-                    <p className="text-xs uppercase tracking-wider text-slate-500">
-                      Phone
-                    </p>
-                    <p className="text-sm font-medium text-[color:var(--navy-deep)]">
-                      +1 (XXX) XXX-XXXX
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[color:var(--accent-soft)] text-[color:var(--navy)]">
-                    <ArrowRightIcon className="h-4 w-4" />
-                  </span>
-                  <div>
-                    <p className="text-xs uppercase tracking-wider text-slate-500">
-                      Website
-                    </p>
-                    <p className="text-sm font-medium text-[color:var(--navy-deep)]">
-                      primeclaimbilling.com
-                    </p>
-                  </div>
-                </div>
+            <dl className="space-y-6 border-t border-[color:var(--hairline-strong)] pt-7">
+              <div className="grid grid-cols-12 gap-4">
+                <dt className="col-span-4 eyebrow pt-1">Phone</dt>
+                <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
+                  +1 (XXX) XXX-XXXX
+                </dd>
               </div>
-
-              <div className="mt-7 rounded-xl bg-[color:var(--bg-soft)] px-4 py-3 text-xs leading-relaxed text-slate-600">
-                We coordinate appropriate business associate and data-handling
-                agreements as part of onboarding for healthcare providers.
+              <div className="grid grid-cols-12 gap-4">
+                <dt className="col-span-4 eyebrow pt-1">Web</dt>
+                <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
+                  primeclaimbilling.com
+                </dd>
               </div>
-            </div>
+              <div className="grid grid-cols-12 gap-4">
+                <dt className="col-span-4 eyebrow pt-1">Hours</dt>
+                <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
+                  Monday — Friday, business hours (ET)
+                </dd>
+              </div>
+            </dl>
+
+            <p className="mt-8 text-[13px] leading-[1.7] text-[color:var(--ink-soft)] italic max-w-sm">
+              Appropriate business associate and data-handling agreements are
+              coordinated as part of onboarding.
+            </p>
           </div>
         </div>
       </Container>

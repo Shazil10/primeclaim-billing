@@ -1,152 +1,79 @@
 import Container from "./Container";
 import SectionHeading from "./SectionHeading";
-import { CheckIcon } from "./icons";
 
-const PRICING_ROWS = [
+const NOTES = [
   {
-    situation: "Clean workflow + consistent volume",
-    rate: "Around 3.0%",
+    label: "Net collections",
+    body: "We&rsquo;re paid on revenue actually collected and posted — not on gross billed charges.",
   },
   {
-    situation: "Standard small/mid-sized practice",
-    rate: "3.5% – 4.0%",
+    label: "No setup fees",
+    body: "No onboarding charges, no contract minimums. We start when you&rsquo;re ready.",
   },
   {
-    situation: "Higher complexity or heavier denial follow-up",
-    rate: "Custom quote",
+    label: "Special scope",
+    body: "Old AR cleanup, recovery work, and complex specialties are quoted separately.",
   },
-  {
-    situation: "Old AR cleanup or special recovery work",
-    rate: "Quoted separately",
-  },
-];
-
-const HIGHLIGHTS = [
-  "Based on net collections, not gross billed charges.",
-  "Aligned incentives — we are paid on revenue actually collected.",
-  "Transparent monthly summaries of activity and outcomes.",
 ];
 
 export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="py-20 sm:py-24 bg-white"
+      className="bg-[color:var(--paper-deep)] py-24 sm:py-32 border-y border-[color:var(--hairline-strong)]"
     >
       <Container>
         <SectionHeading
+          index="03"
           eyebrow="Pricing"
-          title="Simple, performance-aligned pricing"
-          description="Our pricing is based on monthly net collections, not gross charges. That means our incentives are aligned with your practice: we are paid based on revenue actually collected and posted."
+          title="One number. Nothing hidden."
+          description="Our pricing is performance-aligned: a single flat rate on what your practice actually collects."
         />
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-12">
-          {/* Main pricing card */}
-          <div className="lg:col-span-5">
-            <div className="h-full rounded-2xl border border-[color:var(--border)] bg-gradient-to-br from-[color:var(--navy-deep)] to-[color:var(--navy)] p-8 text-white shadow-[0_12px_40px_-12px_rgba(0,59,111,0.4)]">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
-                Starting at
-              </p>
-              <p className="mt-3 text-5xl font-semibold tracking-tight">
-                3% – 4%
-              </p>
-              <p className="mt-1 text-sm text-white/80">
-                of monthly collections
-              </p>
-
-              <div className="mt-7 h-px bg-white/15" />
-
-              <ul className="mt-6 space-y-3">
-                {HIGHLIGHTS.map((item) => (
-                  <li key={item} className="flex items-start gap-2.5 text-sm">
-                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/15">
-                      <CheckIcon
-                        className="h-3 w-3 text-white"
-                        strokeWidth={2.6}
-                      />
-                    </span>
-                    <span className="text-white/90">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <p className="mt-7 text-xs leading-relaxed text-white/70">
-                For practices with clean billing workflows and consistent
-                volume, pricing may be closer to 3%.
-              </p>
-
-              <a
-                href="#contact"
-                className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 text-sm font-semibold text-[color:var(--navy-deep)] hover:bg-slate-100 transition-colors"
-              >
-                Request a quote
-              </a>
-            </div>
+        {/* The number */}
+        <div className="mt-20 grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+          <div className="lg:col-span-7">
+            <p className="eyebrow">You keep</p>
+            <p
+              className="font-display numeral mt-3 text-[7rem] sm:text-[10rem] lg:text-[13rem] leading-[0.85] text-[color:var(--ink)] tracking-[-0.04em]"
+              style={{ fontWeight: 300 }}
+            >
+              96.5<span className="text-[color:var(--ink-soft)]">%</span>
+            </p>
+            <p className="mt-6 text-[1.02rem] leading-[1.7] text-[color:var(--ink-muted)] max-w-md">
+              of every dollar collected. We charge a flat{" "}
+              <span className="text-[color:var(--ink)] font-medium">3.5%</span>{" "}
+              on net collections, and nothing on what we don&rsquo;t collect.
+            </p>
           </div>
 
-          {/* Pricing table */}
-          <div className="lg:col-span-7">
-            <div className="rounded-2xl border border-[color:var(--border)] bg-white overflow-hidden">
-              <div className="px-6 py-5 border-b border-[color:var(--border)]">
-                <h3 className="text-base font-semibold text-[color:var(--navy-deep)]">
-                  Typical pricing by practice situation
-                </h3>
-                <p className="mt-1 text-sm text-slate-600">
-                  Final pricing depends on specialty, claim volume, denial
-                  complexity, existing workflow, and required level of
-                  follow-up.
-                </p>
-              </div>
+          <div className="lg:col-span-5">
+            <ul className="border-t border-[color:var(--hairline-strong)]">
+              {NOTES.map((note) => (
+                <li
+                  key={note.label}
+                  className="grid grid-cols-12 gap-4 border-b border-[color:var(--hairline-strong)] py-5"
+                >
+                  <span className="eyebrow col-span-12 sm:col-span-4 pt-1">
+                    {note.label}
+                  </span>
+                  <p
+                    className="col-span-12 sm:col-span-8 text-[14.5px] leading-[1.65] text-[color:var(--ink-muted)]"
+                    dangerouslySetInnerHTML={{ __html: note.body }}
+                  />
+                </li>
+              ))}
+            </ul>
 
-              {/* Desktop table */}
-              <div className="hidden sm:block">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="bg-[color:var(--bg-soft)] text-left text-xs font-semibold uppercase tracking-wider text-slate-600">
-                      <th className="px-6 py-3">Practice situation</th>
-                      <th className="px-6 py-3 text-right">Typical rate</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-[color:var(--border)]">
-                    {PRICING_ROWS.map((row) => (
-                      <tr key={row.situation}>
-                        <td className="px-6 py-4 text-slate-800">
-                          {row.situation}
-                        </td>
-                        <td className="px-6 py-4 text-right font-semibold text-[color:var(--navy-deep)]">
-                          {row.rate}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-
-              {/* Mobile stacked */}
-              <div className="sm:hidden divide-y divide-[color:var(--border)]">
-                {PRICING_ROWS.map((row) => (
-                  <div key={row.situation} className="px-5 py-4">
-                    <p className="text-xs uppercase tracking-wider text-slate-500">
-                      Practice situation
-                    </p>
-                    <p className="mt-1 text-sm text-slate-800">
-                      {row.situation}
-                    </p>
-                    <p className="mt-3 text-xs uppercase tracking-wider text-slate-500">
-                      Typical rate
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-[color:var(--navy-deep)]">
-                      {row.rate}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="px-6 py-4 bg-[color:var(--bg-soft)] border-t border-[color:var(--border)] text-xs text-slate-600">
-                Pricing is reviewed and confirmed in writing before any work
-                begins. No hidden fees.
-              </div>
-            </div>
+            <a
+              href="#contact"
+              className="mt-8 inline-flex items-center gap-2 text-[14px] tracking-wide text-[color:var(--ink)]"
+            >
+              <span className="border-b border-[color:var(--ink)] pb-0.5">
+                Request a written quote
+              </span>
+              <span aria-hidden>→</span>
+            </a>
           </div>
         </div>
       </Container>

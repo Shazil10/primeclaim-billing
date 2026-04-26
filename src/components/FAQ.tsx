@@ -1,58 +1,56 @@
 import Container from "./Container";
 import SectionHeading from "./SectionHeading";
-import { ChevronDownIcon } from "./icons";
 
 const FAQS = [
   {
-    q: "Do you charge based on billed charges or collections?",
-    a: "We charge based on monthly net collections — money actually collected and posted — not gross billed charges.",
-  },
-  {
-    q: "Do you work with small practices?",
-    a: "Yes. We are designed for small and mid-sized practices that want reliable billing support without building a large in-house team.",
+    q: "Do you charge on billed charges or collections?",
+    a: "Net collections — money actually collected and posted. Never on gross billed charges, and never on what we don't collect.",
   },
   {
     q: "Can we start with a limited scope?",
-    a: "Yes. Many practices begin with a specific workflow, claim type, or follow-up need before expanding.",
+    a: "Yes. Many practices start with a single workflow — denial follow-up, AR cleanup, or a specific claim type — and expand from there.",
   },
   {
-    q: "Do you support old AR cleanup?",
-    a: "Yes, old AR cleanup can be reviewed and quoted separately depending on volume and aging.",
-  },
-  {
-    q: "Do you handle patient data securely?",
-    a: "We work through controlled access, defined workflows, and appropriate confidentiality practices. For healthcare providers, we can coordinate the necessary business associate and data handling requirements as part of onboarding.",
+    q: "How do you handle patient data?",
+    a: "Through controlled access, defined workflows, and the appropriate business associate and confidentiality agreements that healthcare providers expect during onboarding.",
   },
 ];
 
 export default function FAQ() {
   return (
-    <section className="py-20 sm:py-24 bg-white">
+    <section className="bg-[color:var(--paper)] py-24 sm:py-32 border-t border-[color:var(--hairline)]">
       <Container size="narrow">
         <SectionHeading
-          eyebrow="FAQ"
-          title="Frequently asked questions"
-          description="Quick answers to the questions practice owners and office managers ask most often."
+          index="06"
+          eyebrow="Common questions"
+          title="The short answers."
+          align="left"
         />
 
-        <div className="mt-10 divide-y divide-[color:var(--border)] rounded-2xl border border-[color:var(--border)] bg-white overflow-hidden">
+        <div className="mt-14">
           {FAQS.map((item, idx) => (
             <details
               key={item.q}
-              className="group"
+              className="group border-t border-[color:var(--hairline)] last:border-b"
               open={idx === 0}
             >
-              <summary className="flex cursor-pointer items-center justify-between gap-4 px-5 sm:px-6 py-5 text-left list-none [&::-webkit-details-marker]:hidden">
-                <span className="text-base font-medium text-[color:var(--navy-deep)] pr-4">
+              <summary className="flex cursor-pointer items-start justify-between gap-6 py-6 list-none [&::-webkit-details-marker]:hidden">
+                <span
+                  className="font-display text-[1.3rem] sm:text-[1.5rem] leading-tight text-[color:var(--ink)] pr-4"
+                  style={{ fontWeight: 400 }}
+                >
                   {item.q}
                 </span>
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[color:var(--accent-soft)] text-[color:var(--navy)] transition-transform group-open:rotate-180">
-                  <ChevronDownIcon className="h-4 w-4" />
+                <span
+                  aria-hidden
+                  className="mt-2 shrink-0 text-[color:var(--ink-muted)] transition-transform group-open:rotate-45 text-xl leading-none"
+                >
+                  +
                 </span>
               </summary>
-              <div className="px-5 sm:px-6 pb-5 -mt-1 text-sm leading-relaxed text-slate-600">
+              <p className="pb-7 text-[15.5px] leading-[1.75] text-[color:var(--ink-muted)] max-w-xl">
                 {item.a}
-              </div>
+              </p>
             </details>
           ))}
         </div>
