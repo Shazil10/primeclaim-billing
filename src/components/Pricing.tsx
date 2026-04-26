@@ -1,7 +1,7 @@
 import Container from "./Container";
 import SectionHeading from "./SectionHeading";
 
-const NOTES = [
+const TERMS = [
   {
     label: "Net collections",
     body: "Paid only on revenue that actually posts to your account, never on gross billed charges.",
@@ -20,45 +20,39 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="bg-[color:var(--paper-deep)] py-24 sm:py-32 border-y border-[color:var(--hairline)]"
+      className="bg-[color:var(--paper-deep)] py-24 sm:py-28 border-y border-[color:var(--hairline)]"
     >
       <Container>
-        <SectionHeading
-          index="03"
-          eyebrow="Pricing"
-          title="One number. Nothing hidden."
-        />
-
-        <div className="mt-20 grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
-          <div className="lg:col-span-7">
-            <p className="eyebrow">You keep</p>
-            <p
-              className="font-display numeral mt-3 text-[7rem] sm:text-[10rem] lg:text-[13rem] leading-[0.85] text-[color:var(--accent-deep)] tracking-[-0.04em]"
-              style={{ fontWeight: 300 }}
-            >
-              96.5<span className="text-[color:var(--accent)]/50">%</span>
-            </p>
-            <p className="mt-6 text-[1.02rem] leading-[1.7] text-[color:var(--ink-muted)] max-w-md">
-              of every dollar your practice collects.
-            </p>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              index="03"
+              eyebrow="Pricing"
+              title="The terms, in three lines."
+              align="left"
+            />
           </div>
 
-          <div className="lg:col-span-5">
-            <ul className="border-t border-[color:var(--hairline-strong)]">
-              {NOTES.map((note) => (
+          <div className="lg:col-span-7">
+            <ul className="border-t border-[color:var(--accent)]/35">
+              {TERMS.map((term) => (
                 <li
-                  key={note.label}
-                  className="grid grid-cols-12 gap-4 border-b border-[color:var(--hairline-strong)] py-5"
+                  key={term.label}
+                  className="grid grid-cols-12 gap-4 sm:gap-6 border-b border-[color:var(--hairline-strong)] py-6"
                 >
                   <span className="eyebrow col-span-12 sm:col-span-4 pt-1">
-                    {note.label}
+                    {term.label}
                   </span>
-                  <p className="col-span-12 sm:col-span-8 text-[14.5px] leading-[1.65] text-[color:var(--ink-muted)]">
-                    {note.body}
+                  <p className="col-span-12 sm:col-span-8 text-[15px] leading-[1.7] text-[color:var(--ink-muted)]">
+                    {term.body}
                   </p>
                 </li>
               ))}
             </ul>
+
+            <p className="mt-8 text-[14px] text-[color:var(--ink-soft)] italic">
+              Pricing is confirmed in writing before any work begins.
+            </p>
           </div>
         </div>
       </Container>
