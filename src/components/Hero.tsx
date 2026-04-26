@@ -24,7 +24,7 @@ export default function Hero() {
     >
       <Container>
         {/* Top row: headline + intro on the left, CTAs */}
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="grid lg:grid-cols-12 gap-y-24 lg:gap-y-0 lg:gap-x-24">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3">
               <span className="numeral text-[color:var(--ink-soft)] text-sm">
@@ -77,7 +77,7 @@ export default function Hero() {
           {/* Pricing block: number + sentence + terms */}
           <aside
             id="pricing"
-            className="lg:col-span-5 lg:pl-8 lg:border-l lg:border-[color:var(--accent)]/20 scroll-mt-24"
+            className="lg:col-span-5 lg:pl-10 lg:border-l lg:border-[color:var(--accent)]/20 scroll-mt-24"
           >
             <div className="flex items-center gap-3">
               <span className="numeral text-[color:var(--ink-soft)] text-sm">
@@ -87,24 +87,26 @@ export default function Hero() {
               <span className="eyebrow">Performance-aligned</span>
             </div>
 
-            <p
-              className="font-display numeral mt-5 text-[6.5rem] sm:text-[8.5rem] lg:text-[10.5rem] leading-[0.85] text-[color:var(--accent-deep)] tracking-[-0.04em]"
-              style={{ fontWeight: 300 }}
-            >
-              96.5
-              <span className="text-[color:var(--accent)]/50">%</span>
-            </p>
+            <div className="mt-6 flex flex-wrap items-end gap-x-6 sm:gap-x-7 gap-y-4">
+              <p
+                className="font-display numeral text-[5.25rem] sm:text-[6.75rem] lg:text-[6rem] xl:text-[6.5rem] leading-[0.82] text-[color:var(--accent-deep)] tracking-[-0.04em] shrink-0"
+                style={{ fontWeight: 300 }}
+              >
+                96.5
+                <span className="text-[color:var(--accent)]/45">%</span>
+              </p>
+              <p className="flex-1 min-w-[15rem] max-w-[22rem] text-[15px] sm:text-[15.5px] leading-[1.6] text-[color:var(--ink-muted)] pb-3">
+                of every dollar collected stays with your practice. We
+                charge a flat{" "}
+                <span className="text-[color:var(--ink)] font-medium">
+                  3.5%
+                </span>{" "}
+                on net collections, and nothing on what we don&apos;t
+                collect.
+              </p>
+            </div>
 
-            <p className="mt-5 max-w-md text-[15.5px] leading-[1.7] text-[color:var(--ink-muted)]">
-              of every dollar collected stays with your practice. We charge
-              a flat{" "}
-              <span className="text-[color:var(--ink)] font-medium">
-                3.5%
-              </span>{" "}
-              on net collections, and nothing on what we don&apos;t collect.
-            </p>
-
-            <ul className="mt-8 border-t border-[color:var(--accent)]/20">
+            <ul className="mt-10 border-t border-[color:var(--accent)]/20">
               {TERMS.map((term) => (
                 <li
                   key={term.label}
