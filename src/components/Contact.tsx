@@ -32,7 +32,7 @@ export default function Contact() {
             </p>
 
             <a
-              href="mailto:info@primeclaimbilling.com?subject=Intro%20call%20—%20PrimeClaim%20Billing"
+              href="mailto:info@primeclaimbilling.com?subject=Intro%20call%20with%20PrimeClaim"
               className="mt-10 inline-flex items-baseline gap-3 group"
             >
               <span
@@ -67,7 +67,7 @@ export default function Contact() {
               <div className="grid grid-cols-12 gap-4">
                 <dt className="col-span-4 eyebrow pt-1">Hours</dt>
                 <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
-                  Monday — Friday, business hours (ET)
+                  Monday to Friday, business hours (ET)
                 </dd>
               </div>
             </dl>

@@ -1,24 +1,24 @@
-# PrimeClaim Billing — Marketing Site
+# PrimeClaim. Marketing Site
 
-Production-ready landing page for **PrimeClaim Billing**, a U.S. medical billing and revenue cycle management firm serving small and mid-sized healthcare practices.
+Production-ready landing page for **PrimeClaim**, a U.S. medical billing and revenue cycle management firm serving small and mid-sized healthcare practices.
 
 Built with **Next.js (App Router) + TypeScript + Tailwind CSS v4**, designed to deploy on **Vercel**.
 
-Designed in the *brand* register following the [Impeccable](https://impeccable.style) design philosophy: editorial typography, restrained palette, generous whitespace, no AI-slop anti-patterns (no purple gradients, no nested cards, no fake KPI dashboards, no Inter-everywhere, no gradient text).
+Designed in the *brand* register following the [Impeccable](https://impeccable.style) design philosophy: editorial typography, restrained palette, generous whitespace, and none of the standard AI-slop anti-patterns (no purple gradients, no nested cards, no fake KPI dashboards, no Inter-everywhere, no gradient text).
 
 ---
 
 ## Sections (in order)
 
-1. **Header** — typographic wordmark, light nav, single text-link CTA
-2. **Hero** — display headline + the **96.5%** pricing pull-quote
-3. **Services** — six pillars as a numbered editorial list (no card grid)
-4. **Pricing** — "You keep 96.5%." centerpiece (3.5% on net collections)
-5. **Process** — four distilled steps
-6. **Specialties** — single editorial line of names
-7. **FAQ** — three essential questions, refined accordion
-8. **Contact** — quiet final spread; email rendered in display type
-9. **Footer** — minimal single line
+1. **Header**. Monogram + wordmark, light nav, single text-link CTA.
+2. **Hero**. Display headline plus the **96.5%** pricing pull-quote.
+3. **Services**. Six pillars as a numbered editorial list, no card grid.
+4. **Pricing**. "You keep 96.5%." centerpiece. 3.5% on net collections.
+5. **Process**. Four distilled steps.
+6. **Specialties**. Single editorial line of names.
+7. **FAQ**. Three essential questions, refined accordion.
+8. **Contact**. Quiet final spread, email rendered in display type.
+9. **Footer**. Minimal single line.
 
 ## Tech stack
 
@@ -26,7 +26,7 @@ Designed in the *brand* register following the [Impeccable](https://impeccable.s
 - React 19
 - TypeScript
 - Tailwind CSS v4
-- `next/font/google` — **Fraunces** (display) + **Instrument Sans** (body)
+- `next/font/google`: **Fraunces** (display) and **Instrument Sans** (body)
 
 ## Project structure
 
@@ -64,7 +64,7 @@ public/
 --ink-soft:        #8A8170   (tertiary / numerals)
 --hairline:        #E1D9C7   (light dividers)
 --hairline-strong: #C9BFA9   (heavier dividers)
---accent:          #2A463D   (deep moss — used very sparingly)
+--accent:          #2A463D   (deep moss, used very sparingly)
 ```
 
 Typography:
@@ -98,7 +98,7 @@ npm run lint
 
 ## Replacing the logo
 
-The current logo is **typographic** — it renders the actual loaded display serif (Fraunces) in `src/components/Logo.tsx`. Nothing to replace unless you want a custom wordmark.
+The current logo is a **monogram + wordmark** rendered with the loaded display serif (Fraunces): a hairline circle with an italic *P* inside, set next to *PrimeClaim* in italic Fraunces. It lives in `src/components/Logo.tsx`. No raster asset, no rasterization at any zoom level.
 
 If you eventually want to use an image:
 
@@ -120,7 +120,7 @@ The fastest path:
 
 1. Push this repo to GitHub.
 2. Go to <https://vercel.com/new> and import the repository.
-3. Vercel will auto-detect **Next.js** — leave the defaults.
+3. Vercel will auto-detect **Next.js**. Leave the defaults.
 4. Click **Deploy**. No environment variables are required.
 
 ### Custom domain
@@ -139,4 +139,4 @@ After the domain is connected, update `metadataBase` in `src/app/layout.tsx` if 
 
 ## License
 
-Proprietary — © 2026 PrimeClaim Billing. All rights reserved.
+Proprietary. © 2026 PrimeClaim. All rights reserved.

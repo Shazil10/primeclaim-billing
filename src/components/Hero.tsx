@@ -30,8 +30,8 @@ export default function Hero() {
 
             <p className="mt-7 max-w-xl text-[1.05rem] sm:text-[1.1rem] leading-[1.7] text-[color:var(--ink-muted)]">
               We help small and mid-sized U.S. healthcare practices submit
-              cleaner claims, follow up faster, and get paid on time —
-              without the cost of a large in-house billing team.
+              cleaner claims, follow up faster, and get paid on time, without
+              the cost of a large in-house billing team.
             </p>
 
             <div className="mt-10 flex items-center gap-8 sm:gap-10">
@@ -71,7 +71,7 @@ export default function Hero() {
               <p className="mt-2 text-[15px] leading-[1.55] text-[color:var(--ink-muted)] max-w-[18rem]">
                 of every dollar collected stays with your practice. We charge
                 a flat <span className="text-[color:var(--ink)]">3.5%</span> on
-                net collections — nothing on what we don&apos;t collect.
+                net collections, and nothing on what we don&apos;t collect.
               </p>
             </div>
           </div>

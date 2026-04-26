@@ -20,7 +20,7 @@ const STEPS = [
   {
     title: "Ongoing support",
     description:
-      "Submission, follow-up, posting, denial management, and a quiet monthly summary — every month.",
+      "Daily billing operations and a quiet monthly summary, on the cadence we agree on.",
   },
 ];
 

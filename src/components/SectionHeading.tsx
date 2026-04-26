@@ -9,7 +9,7 @@ interface SectionHeadingProps {
 
 /**
  * Editorial section heading.
- * Pattern:  "01 — Pricing"  (eyebrow row in small caps + numeral)
+ * Pattern:  "01 / Pricing"  (eyebrow row in small caps + numeral)
  *           Big serif title
  *           One sentence in body face
  */

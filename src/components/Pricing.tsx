@@ -4,15 +4,15 @@ import SectionHeading from "./SectionHeading";
 const NOTES = [
   {
     label: "Net collections",
-    body: "We&rsquo;re paid on revenue actually collected and posted — not on gross billed charges.",
+    body: "Paid only on revenue that actually posts to your account, never on gross billed charges.",
   },
   {
-    label: "No setup fees",
-    body: "No onboarding charges, no contract minimums. We start when you&rsquo;re ready.",
+    label: "No setup",
+    body: "No onboarding fees, no contract minimums.",
   },
   {
     label: "Special scope",
-    body: "Old AR cleanup, recovery work, and complex specialties are quoted separately.",
+    body: "Old AR cleanup and recovery work are quoted separately.",
   },
 ];
 
@@ -27,10 +27,8 @@ export default function Pricing() {
           index="03"
           eyebrow="Pricing"
           title="One number. Nothing hidden."
-          description="Our pricing is performance-aligned: a single flat rate on what your practice actually collects."
         />
 
-        {/* The number */}
         <div className="mt-20 grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
           <div className="lg:col-span-7">
             <p className="eyebrow">You keep</p>
@@ -41,9 +39,7 @@ export default function Pricing() {
               96.5<span className="text-[color:var(--ink-soft)]">%</span>
             </p>
             <p className="mt-6 text-[1.02rem] leading-[1.7] text-[color:var(--ink-muted)] max-w-md">
-              of every dollar collected. We charge a flat{" "}
-              <span className="text-[color:var(--ink)] font-medium">3.5%</span>{" "}
-              on net collections, and nothing on what we don&rsquo;t collect.
+              of every dollar your practice collects.
             </p>
           </div>
 
@@ -57,23 +53,12 @@ export default function Pricing() {
                   <span className="eyebrow col-span-12 sm:col-span-4 pt-1">
                     {note.label}
                   </span>
-                  <p
-                    className="col-span-12 sm:col-span-8 text-[14.5px] leading-[1.65] text-[color:var(--ink-muted)]"
-                    dangerouslySetInnerHTML={{ __html: note.body }}
-                  />
+                  <p className="col-span-12 sm:col-span-8 text-[14.5px] leading-[1.65] text-[color:var(--ink-muted)]">
+                    {note.body}
+                  </p>
                 </li>
               ))}
             </ul>
-
-            <a
-              href="#contact"
-              className="mt-8 inline-flex items-center gap-2 text-[14px] tracking-wide text-[color:var(--ink)]"
-            >
-              <span className="border-b border-[color:var(--ink)] pb-0.5">
-                Request a written quote
-              </span>
-              <span aria-hidden>→</span>
-            </a>
           </div>
         </div>
       </Container>

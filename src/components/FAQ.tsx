@@ -4,11 +4,11 @@ import SectionHeading from "./SectionHeading";
 const FAQS = [
   {
     q: "Do you charge on billed charges or collections?",
-    a: "Net collections — money actually collected and posted. Never on gross billed charges, and never on what we don't collect.",
+    a: "Net collections only. Money actually collected and posted to your account, never gross billed charges, and never anything on what we don't collect.",
   },
   {
     q: "Can we start with a limited scope?",
-    a: "Yes. Many practices start with a single workflow — denial follow-up, AR cleanup, or a specific claim type — and expand from there.",
+    a: "Yes. Many practices start with a single workflow such as denial follow-up, AR cleanup, or a specific claim type, then expand from there.",
   },
   {
     q: "How do you handle patient data?",

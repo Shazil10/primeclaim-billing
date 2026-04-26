@@ -17,21 +17,21 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://primeclaimbilling.com"),
-  title: "PrimeClaim Billing — Medical billing, done quietly.",
+  title: "PrimeClaim. Medical billing, done quietly.",
   description:
     "Medical billing and revenue cycle support for small and mid-sized U.S. healthcare practices. You keep 96.5% of every dollar collected.",
   openGraph: {
-    title: "PrimeClaim Billing — Medical billing, done quietly.",
+    title: "PrimeClaim. Medical billing, done quietly.",
     description:
       "Medical billing and revenue cycle support for small and mid-sized U.S. healthcare practices.",
     url: "https://primeclaimbilling.com",
-    siteName: "PrimeClaim Billing",
+    siteName: "PrimeClaim",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PrimeClaim Billing — Medical billing, done quietly.",
+    title: "PrimeClaim. Medical billing, done quietly.",
     description:
       "Medical billing and revenue cycle support for small and mid-sized U.S. healthcare practices.",
   },
