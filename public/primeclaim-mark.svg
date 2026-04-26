@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="PrimeClaim Billing mark">
+  <defs>
+    <linearGradient id="pcMarkOnly" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#003b6f"/>
+      <stop offset="100%" stop-color="#1e73be"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="68" height="68" rx="16" fill="url(#pcMarkOnly)"/>
+  <path d="M24 24 h16 a9 9 0 0 1 0 18 h-9 v14 h-7 z M31 31 v6 h9 a3 3 0 0 0 0-6 z" fill="#ffffff"/>
+  <path d="M58 46 a11 11 0 1 1 -11 -11 v7 a4.5 4.5 0 1 0 4.5 4.5 z" fill="#ffffff" opacity="0.95"/>
+</svg>
