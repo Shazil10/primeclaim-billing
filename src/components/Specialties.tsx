@@ -19,7 +19,7 @@ export default function Specialties() {
               <span className="numeral text-[color:var(--ink-soft)] text-sm">
                 05
               </span>
-              <span className="h-px w-8 bg-[color:var(--hairline-strong)]" />
+              <span className="h-px w-8 bg-[color:var(--accent)]/40" />
               <span className="eyebrow">Built for</span>
             </div>
           </div>

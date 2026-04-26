@@ -42,7 +42,7 @@ export default function SectionHeading({
           {eyebrow && <span className="eyebrow">{eyebrow}</span>}
         </div>
       )}
-      <h2 className="font-display mt-5 text-[2.1rem] sm:text-[2.6rem] lg:text-[3rem] leading-[1.05] text-[color:var(--ink)]"
+      <h2 className="font-display mt-5 text-[2.1rem] sm:text-[2.6rem] lg:text-[3rem] leading-[1.05] text-[color:var(--accent-deep)]"
           style={{ fontWeight: 400 }}>
         {title}
       </h2>

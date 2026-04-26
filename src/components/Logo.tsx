@@ -19,7 +19,7 @@ export default function Logo({ className = "", size = "md" }: LogoProps) {
     >
       <span
         aria-hidden
-        className={`relative inline-flex ${markSize} items-center justify-center rounded-full border border-[color:var(--ink)] text-[color:var(--ink)]`}
+        className={`relative inline-flex ${markSize} items-center justify-center rounded-full border border-[color:var(--accent)] text-[color:var(--accent)]`}
       >
         <span
           className="font-display italic leading-none translate-y-[-1px]"
@@ -29,7 +29,7 @@ export default function Logo({ className = "", size = "md" }: LogoProps) {
         </span>
       </span>
       <span
-        className={`font-display italic leading-none tracking-[-0.01em] text-[color:var(--ink)] ${wordSize}`}
+        className={`font-display italic leading-none tracking-[-0.01em] text-[color:var(--accent)] ${wordSize}`}
         style={{ fontWeight: 500 }}
       >
         PrimeClaim

@@ -7,10 +7,12 @@ import Pricing from "@/components/Pricing";
 import Process from "@/components/Process";
 import Services from "@/components/Services";
 import Specialties from "@/components/Specialties";
+import TopBar from "@/components/TopBar";
 
 export default function Home() {
   return (
     <>
+      <TopBar />
       <Header />
       <main className="flex-1">
         <Hero />

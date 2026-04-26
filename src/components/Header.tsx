@@ -33,7 +33,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[13px] tracking-wide text-[color:var(--ink-muted)] hover:text-[color:var(--ink)] transition-colors"
+              className="text-[13px] tracking-wide text-[color:var(--ink-muted)] hover:text-[color:var(--accent)] transition-colors"
             >
               {link.label}
             </a>
@@ -42,7 +42,7 @@ export default function Header() {
 
         <a
           href="#contact"
-          className="hidden md:inline-flex items-center gap-2 text-[13px] tracking-wide text-[color:var(--ink)] border-b border-[color:var(--ink)] pb-0.5 hover:opacity-70 transition-opacity"
+          className="hidden md:inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-4 py-2 text-[13px] tracking-wide text-white hover:bg-[color:var(--accent-deep)] transition-colors"
         >
           Schedule a call
           <span aria-hidden>→</span>
@@ -103,7 +103,7 @@ export default function Header() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-4 inline-flex w-fit items-center gap-2 text-[14px] text-[color:var(--ink)] border-b border-[color:var(--ink)] pb-0.5"
+            className="mt-4 inline-flex w-fit items-center gap-2 rounded-full bg-[color:var(--accent)] px-5 py-2.5 text-[14px] tracking-wide text-white"
           >
             Schedule a call
             <span aria-hidden>→</span>

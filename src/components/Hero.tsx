@@ -1,20 +1,20 @@
 import Container from "./Container";
+import { ArrowRight } from "./icons";
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative bg-[color:var(--paper)] pt-20 sm:pt-28 lg:pt-36 pb-24 sm:pb-32"
+      className="relative bg-[color:var(--paper)] pt-16 sm:pt-24 lg:pt-32 pb-24 sm:pb-32"
     >
       <Container>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
-          {/* Display headline */}
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3">
               <span className="numeral text-[color:var(--ink-soft)] text-sm">
                 01
               </span>
-              <span className="h-px w-8 bg-[color:var(--hairline-strong)]" />
+              <span className="h-px w-8 bg-[color:var(--accent)]/45" />
               <span className="eyebrow">A medical billing partner</span>
             </div>
 
@@ -23,7 +23,10 @@ export default function Hero() {
               style={{ fontWeight: 400 }}
             >
               Medical billing,{" "}
-              <em className="italic text-[color:var(--accent)]" style={{ fontWeight: 400 }}>
+              <em
+                className="italic text-[color:var(--accent)]"
+                style={{ fontWeight: 400 }}
+              >
                 done quietly.
               </em>
             </h1>
@@ -34,39 +37,36 @@ export default function Hero() {
               the cost of a large in-house billing team.
             </p>
 
-            <div className="mt-10 flex items-center gap-8 sm:gap-10">
+            <div className="mt-10 flex flex-wrap items-center gap-5 sm:gap-7">
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-3 text-[14px] tracking-wide text-[color:var(--ink)]"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-[color:var(--accent)] px-6 py-3 text-[14px] tracking-wide text-white shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:bg-[color:var(--accent-deep)] transition-colors"
               >
-                <span className="border-b border-[color:var(--ink)] pb-1">
-                  Start a conversation
-                </span>
-                <span
-                  aria-hidden
-                  className="transition-transform group-hover:translate-x-1"
-                >
-                  →
-                </span>
+                Start a conversation
+                <ArrowRight
+                  className="transition-transform group-hover:translate-x-0.5"
+                  width={16}
+                  height={16}
+                />
               </a>
               <a
                 href="#services"
-                className="text-[14px] tracking-wide text-[color:var(--ink-muted)] hover:text-[color:var(--ink)] transition-colors"
+                className="text-[14px] tracking-wide text-[color:var(--ink-muted)] hover:text-[color:var(--accent)] transition-colors"
               >
                 See what we do
               </a>
             </div>
           </div>
 
-          {/* Quiet pricing pull-quote */}
           <div className="lg:col-span-4">
-            <div className="border-t border-[color:var(--hairline-strong)] pt-7">
+            <div className="border-t border-[color:var(--accent)]/35 pt-7">
               <p className="eyebrow">Performance-aligned</p>
               <p
-                className="font-display mt-3 text-[3.4rem] sm:text-[4rem] leading-none text-[color:var(--ink)] numeral"
+                className="font-display mt-3 text-[3.4rem] sm:text-[4rem] leading-none text-[color:var(--accent-deep)] numeral"
                 style={{ fontWeight: 400 }}
               >
-                96.5<span className="text-[color:var(--ink-soft)]">%</span>
+                96.5
+                <span className="text-[color:var(--accent)]/55">%</span>
               </p>
               <p className="mt-2 text-[15px] leading-[1.55] text-[color:var(--ink-muted)] max-w-[18rem]">
                 of every dollar collected stays with your practice. We charge
@@ -77,11 +77,6 @@ export default function Hero() {
           </div>
         </div>
       </Container>
-
-      {/* hairline footer of hero */}
-      <div className="mx-auto max-w-6xl px-6 sm:px-8 lg:px-12 mt-20 sm:mt-28">
-        <div className="border-t border-[color:var(--hairline)]" />
-      </div>
     </section>
   );
 }

@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-[color:var(--paper-deep)] py-28 sm:py-36 border-t border-[color:var(--hairline-strong)]"
+      className="bg-[color:var(--paper-deep)] py-28 sm:py-36 border-t border-[color:var(--hairline)]"
     >
       <Container>
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-end">
@@ -18,7 +18,7 @@ export default function Contact() {
             </div>
 
             <h2
-              className="font-display mt-6 text-[2.3rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.05] text-[color:var(--ink)] tracking-[-0.02em]"
+              className="font-display mt-6 text-[2.3rem] sm:text-[3rem] lg:text-[3.6rem] leading-[1.05] text-[color:var(--accent-deep)] tracking-[-0.02em]"
               style={{ fontWeight: 400 }}
             >
               Tell us where billing is{" "}
@@ -31,23 +31,26 @@ export default function Contact() {
               conversation is short, specific, and free of charge.
             </p>
 
-            <a
-              href="mailto:info@primeclaimbilling.com?subject=Intro%20call%20with%20PrimeClaim"
-              className="mt-10 inline-flex items-baseline gap-3 group"
-            >
-              <span
-                className="font-display text-[1.5rem] sm:text-[2rem] lg:text-[2.4rem] text-[color:var(--ink)] border-b border-[color:var(--ink)] pb-1 group-hover:opacity-70 transition-opacity"
-                style={{ fontWeight: 400 }}
+            <div className="mt-10 flex flex-wrap items-center gap-4 sm:gap-6">
+              <a
+                href="mailto:info@primeclaimbilling.com?subject=Intro%20call%20with%20PrimeClaim"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-[color:var(--accent)] px-6 py-3 text-[14px] tracking-wide text-white hover:bg-[color:var(--accent-deep)] transition-colors"
               >
-                info@primeclaimbilling.com
-              </span>
-              <span
-                aria-hidden
-                className="text-[color:var(--ink)] transition-transform group-hover:translate-x-1"
+                Email info@primeclaimbilling.com
+                <span
+                  aria-hidden
+                  className="transition-transform group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </a>
+              <a
+                href="tel:+1XXXXXXXXXX"
+                className="text-[14px] tracking-wide text-[color:var(--ink-muted)] hover:text-[color:var(--accent)] transition-colors"
               >
-                →
-              </span>
-            </a>
+                Or call us instead
+              </a>
+            </div>
           </div>
 
           <div className="lg:col-span-5">

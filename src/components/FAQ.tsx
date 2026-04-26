@@ -36,7 +36,7 @@ export default function FAQ() {
             >
               <summary className="flex cursor-pointer items-start justify-between gap-6 py-6 list-none [&::-webkit-details-marker]:hidden">
                 <span
-                  className="font-display text-[1.3rem] sm:text-[1.5rem] leading-tight text-[color:var(--ink)] pr-4"
+                  className="font-display text-[1.3rem] sm:text-[1.5rem] leading-tight text-[color:var(--accent-deep)] pr-4"
                   style={{ fontWeight: 400 }}
                 >
                   {item.q}

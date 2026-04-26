@@ -20,7 +20,7 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="bg-[color:var(--paper-deep)] py-24 sm:py-32 border-y border-[color:var(--hairline-strong)]"
+      className="bg-[color:var(--paper-deep)] py-24 sm:py-32 border-y border-[color:var(--hairline)]"
     >
       <Container>
         <SectionHeading
@@ -33,10 +33,10 @@ export default function Pricing() {
           <div className="lg:col-span-7">
             <p className="eyebrow">You keep</p>
             <p
-              className="font-display numeral mt-3 text-[7rem] sm:text-[10rem] lg:text-[13rem] leading-[0.85] text-[color:var(--ink)] tracking-[-0.04em]"
+              className="font-display numeral mt-3 text-[7rem] sm:text-[10rem] lg:text-[13rem] leading-[0.85] text-[color:var(--accent-deep)] tracking-[-0.04em]"
               style={{ fontWeight: 300 }}
             >
-              96.5<span className="text-[color:var(--ink-soft)]">%</span>
+              96.5<span className="text-[color:var(--accent)]/50">%</span>
             </p>
             <p className="mt-6 text-[1.02rem] leading-[1.7] text-[color:var(--ink-muted)] max-w-md">
               of every dollar your practice collects.
