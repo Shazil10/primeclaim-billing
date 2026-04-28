@@ -11,7 +11,7 @@ export default function Contact() {
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3">
               <span className="numeral text-[color:var(--ink-soft)] text-sm">
-                07
+                08
               </span>
               <span className="h-px w-8 bg-[color:var(--hairline-strong)]" />
               <span className="eyebrow">Contact</span>
@@ -56,9 +56,25 @@ export default function Contact() {
           <div className="lg:col-span-5">
             <dl className="space-y-6 border-t border-[color:var(--hairline-strong)] pt-7">
               <div className="grid grid-cols-12 gap-4">
+                <dt className="col-span-4 eyebrow pt-1">Email</dt>
+                <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
+                  <a
+                    href="mailto:info@primeclaimbilling.com"
+                    className="hover:text-[color:var(--accent)] transition-colors"
+                  >
+                    info@primeclaimbilling.com
+                  </a>
+                </dd>
+              </div>
+              <div className="grid grid-cols-12 gap-4">
                 <dt className="col-span-4 eyebrow pt-1">Phone</dt>
                 <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
-                  +1 (XXX) XXX-XXXX
+                  <a
+                    href="tel:+1XXXXXXXXXX"
+                    className="hover:text-[color:var(--accent)] transition-colors"
+                  >
+                    +1 (XXX) XXX-XXXX
+                  </a>
                 </dd>
               </div>
               <div className="grid grid-cols-12 gap-4">

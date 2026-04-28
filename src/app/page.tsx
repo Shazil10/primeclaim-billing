@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Process from "@/components/Process";
 import Services from "@/components/Services";
 import Specialties from "@/components/Specialties";
+import Systems from "@/components/Systems";
 import TopBar from "@/components/TopBar";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Services />
         <Process />
+        <Systems />
         <Specialties />
         <FAQ />
         <Contact />

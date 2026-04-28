@@ -163,3 +163,51 @@ export function ArrowRight(props: IconProps) {
     </svg>
   );
 }
+
+/* Systems & compliance */
+
+export function Layers(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="m16 5 11 5.5L16 16 5 10.5 16 5Z" />
+      <path d="M5 16.5 16 22l11-5.5" />
+      <path d="M5 22 16 27.5 27 22" />
+      <circle cx="29" cy="6" r="0.6" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function ShieldLock(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M16 4.5 6.5 7.5v6.7c0 5.4 3.9 9.6 9.5 11.3 5.6-1.7 9.5-5.9 9.5-11.3V7.5L16 4.5Z" />
+      <rect x="12.5" y="13.5" width="7" height="6" rx="0.8" />
+      <path d="M14 13.5v-1.7a2 2 0 0 1 4 0v1.7" />
+    </svg>
+  );
+}
+
+export function Lock(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="6.5" y="14" width="19" height="13" rx="1.5" />
+      <path d="M10.5 14v-3.5a5.5 5.5 0 0 1 11 0V14" />
+      <circle cx="16" cy="20" r="1.4" />
+      <path d="M16 21.4V24" />
+    </svg>
+  );
+}
+
+export function Calendar(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="5" y="7" width="22" height="20" rx="1.5" />
+      <path d="M5 13h22" />
+      <path d="M11 4.5v5" />
+      <path d="M21 4.5v5" />
+      <circle cx="11.5" cy="19" r="0.9" fill="currentColor" />
+      <circle cx="16" cy="19" r="0.9" fill="currentColor" />
+      <circle cx="20.5" cy="19" r="0.9" fill="currentColor" />
+    </svg>
+  );
+}

@@ -8,11 +8,11 @@ const FAQS = [
   },
   {
     q: "Can we start with a limited scope?",
-    a: "Yes. Many practices start with a single workflow such as denial follow-up, AR cleanup, or a specific claim type, then expand from there.",
+    a: "Yes. Many practices begin with a specific workflow, claim type, denial follow-up need, or AR support before expanding into fuller billing support.",
   },
   {
     q: "How do you handle patient data?",
-    a: "Through controlled access, defined workflows, and the appropriate business associate and confidentiality agreements that healthcare providers expect during onboarding.",
+    a: "We coordinate appropriate business associate and data-handling agreements as part of onboarding. Access is based on the systems and workflow required for billing support.",
   },
 ];
 
@@ -21,7 +21,7 @@ export default function FAQ() {
     <section className="bg-[color:var(--paper)] py-24 sm:py-32 border-t border-[color:var(--hairline)]">
       <Container size="narrow">
         <SectionHeading
-          index="06"
+          index="07"
           eyebrow="Common questions"
           title="The short answers."
           align="left"
