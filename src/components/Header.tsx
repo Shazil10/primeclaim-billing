@@ -41,10 +41,10 @@ export default function Header() {
         </nav>
 
         <a
-          href="#contact"
+          href="mailto:info@primeclaimbilling.com"
           className="hidden md:inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-4 py-2 text-[13px] tracking-wide text-white hover:bg-[color:var(--accent-deep)] transition-colors"
         >
-          Schedule a call
+          Email us
           <span aria-hidden>→</span>
         </a>
 
@@ -101,11 +101,11 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="mailto:info@primeclaimbilling.com"
             onClick={() => setOpen(false)}
             className="mt-4 inline-flex w-fit items-center gap-2 rounded-full bg-[color:var(--accent)] px-5 py-2.5 text-[14px] tracking-wide text-white"
           >
-            Schedule a call
+            Email us
             <span aria-hidden>→</span>
           </a>
         </nav>

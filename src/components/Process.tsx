@@ -43,23 +43,20 @@ export default function Process() {
         />
 
         <ol className="mt-16 grid sm:grid-cols-2 gap-x-12 sm:gap-x-16 gap-y-10 sm:gap-y-14">
-          {STEPS.map((step, idx) => (
+          {STEPS.map((step) => (
             <li key={step.title}>
               <div className="border-t border-[color:var(--hairline)] pt-6">
                 <div className="flex items-center gap-4">
-                  <span className="numeral text-[color:var(--ink-soft)] text-sm">
-                    {String(idx + 1).padStart(2, "0")}
-                  </span>
                   <step.Icon className="text-[color:var(--accent)]" width={26} height={26} />
                   <h3
-                    className="font-display text-[1.5rem] sm:text-[1.75rem] leading-tight text-[color:var(--accent-deep)] ml-1"
+                    className="font-display text-[1.5rem] sm:text-[1.75rem] leading-tight text-[color:var(--accent-deep)]"
                     style={{ fontWeight: 400 }}
                   >
                     {step.title}
                   </h3>
                 </div>
                 <p
-                  className="mt-3 text-[15px] leading-[1.7] text-[color:var(--ink-muted)] max-w-md pl-9"
+                  className="mt-3 text-[15px] leading-[1.7] text-[color:var(--ink-muted)] max-w-md"
                   dangerouslySetInnerHTML={{ __html: step.description }}
                 />
               </div>
