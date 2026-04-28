@@ -37,7 +37,7 @@ const SERVICES = [
   },
   {
     title: "Monthly Reporting",
-    description: "A quiet summary of activity, collections, and follow-up.",
+    description: "A clear summary of activity, collections, and follow-up.",
     Icon: ChartBars,
   },
 ];
@@ -79,7 +79,7 @@ export default function Services() {
         </ul>
 
         <p className="mt-10 text-[14px] text-[color:var(--ink-soft)] italic">
-          Credentialing &amp; old AR cleanup available on request.
+          Credentialing support available on request.
         </p>
       </Container>
     </section>

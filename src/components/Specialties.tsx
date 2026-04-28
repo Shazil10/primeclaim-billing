@@ -30,8 +30,8 @@ export default function Specialties() {
         <SectionHeading
           index="06"
           eyebrow="Specialties"
-          title="Built for small and mid-sized practices."
-          description="We support practices across a range of specialties, including recurring-visit, payer-heavy, and specialty-specific billing workflows."
+          title="Across the practices we serve."
+          description="Recurring-visit specialties, payer-heavy practices, and specialty-specific billing workflows, all included."
         />
 
         <ul className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-10 lg:gap-x-14 border-t border-[color:var(--hairline)]">

@@ -14,12 +14,12 @@ export default function Logo({ className = "", size = "md" }: LogoProps) {
 
   return (
     <span
-      className={`inline-flex items-center gap-3 ${className}`}
-      aria-label="PrimeClaim"
+      className={`inline-flex items-baseline gap-3 ${className}`}
+      aria-label="PrimeClaim Billing"
     >
       <span
         aria-hidden
-        className={`relative inline-flex ${markSize} items-center justify-center rounded-full border border-[color:var(--accent)] text-[color:var(--accent)]`}
+        className={`relative inline-flex ${markSize} items-center justify-center rounded-full border border-[color:var(--accent)] text-[color:var(--accent)] self-center`}
       >
         <span
           className="font-display italic leading-none translate-y-[-1px]"
@@ -32,7 +32,7 @@ export default function Logo({ className = "", size = "md" }: LogoProps) {
         className={`font-display italic leading-none tracking-[-0.01em] text-[color:var(--accent)] ${wordSize}`}
         style={{ fontWeight: 500 }}
       >
-        PrimeClaim
+        PrimeClaim<span className="text-[color:var(--accent)]/65"> Billing</span>
       </span>
     </span>
   );

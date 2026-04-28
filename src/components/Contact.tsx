@@ -33,10 +33,10 @@ export default function Contact() {
 
             <div className="mt-10 flex flex-wrap items-center gap-4 sm:gap-6">
               <a
-                href="mailto:info@primeclaimbilling.com?subject=Intro%20call%20with%20PrimeClaim"
+                href="mailto:info@primeclaimbilling.com?subject=Intro%20call%20with%20PrimeClaim%20Billing"
                 className="group inline-flex items-center gap-2.5 rounded-full bg-[color:var(--accent)] px-6 py-3 text-[14px] tracking-wide text-white hover:bg-[color:var(--accent-deep)] transition-colors"
               >
-                Email info@primeclaimbilling.com
+                Email us
                 <span
                   aria-hidden
                   className="transition-transform group-hover:translate-x-0.5"
@@ -91,10 +91,6 @@ export default function Contact() {
               </div>
             </dl>
 
-            <p className="mt-8 text-[13px] leading-[1.7] text-[color:var(--ink-soft)] italic max-w-sm">
-              Appropriate business associate and data-handling agreements are
-              coordinated as part of onboarding.
-            </p>
           </div>
         </div>
       </Container>

@@ -24,7 +24,7 @@ const STEPS = [
   {
     title: "Ongoing support",
     description:
-      "Daily billing operations and a quiet monthly summary, on the cadence we agree on.",
+      "Daily billing operations and a concise monthly summary, on the cadence we agree on.",
     Icon: Pulse,
   },
 ];

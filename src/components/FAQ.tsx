@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: "How do you handle patient data?",
-    a: "We coordinate appropriate business associate and data-handling agreements as part of onboarding. Access is based on the systems and workflow required for billing support.",
+    a: "Access is scoped to the systems your billing workflow actually requires, and the appropriate agreements are signed during onboarding before any work begins.",
   },
 ];
 
