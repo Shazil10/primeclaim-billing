@@ -97,14 +97,67 @@ offsetY = Math.max(0, Math.min(offsetY, H - side));
 
 console.log("Square crop:", { offsetX, offsetY, side });
 
-await sharp(SRC)
+const cropped = await sharp(SRC)
   .extract({
     left: offsetX,
     top: offsetY,
     width: side,
     height: side,
   })
-  .png()
+  .ensureAlpha()
+  .raw()
+  .toBuffer({ resolveWithObject: true });
+
+const buf = Buffer.from(cropped.data);
+const cw = cropped.info.width;
+const ch = cropped.info.height;
+
+const samplePoints = [
+  [2, 2],
+  [cw - 3, 2],
+  [2, ch - 3],
+  [cw - 3, ch - 3],
+  [Math.floor(cw / 2), 2],
+  [Math.floor(cw / 2), ch - 3],
+];
+
+let br = 0;
+let bg = 0;
+let bb = 0;
+for (const [x, y] of samplePoints) {
+  const i = (y * cw + x) * 4;
+  br += buf[i];
+  bg += buf[i + 1];
+  bb += buf[i + 2];
+}
+br = Math.round(br / samplePoints.length);
+bg = Math.round(bg / samplePoints.length);
+bb = Math.round(bb / samplePoints.length);
+console.log(`Sampled background: rgb(${br}, ${bg}, ${bb})`);
+
+const NEAR = 14;
+const FAR = 70;
+
+for (let i = 0; i < buf.length; i += 4) {
+  const dr = buf[i] - br;
+  const dg = buf[i + 1] - bg;
+  const db = buf[i + 2] - bb;
+  const dist = Math.sqrt(dr * dr + dg * dg + db * db);
+
+  let alpha;
+  if (dist <= NEAR) {
+    alpha = 0;
+  } else if (dist >= FAR) {
+    alpha = buf[i + 3];
+  } else {
+    const t = (dist - NEAR) / (FAR - NEAR);
+    alpha = Math.round(t * buf[i + 3]);
+  }
+  buf[i + 3] = alpha;
+}
+
+await sharp(buf, { raw: { width: cw, height: ch, channels: 4 } })
+  .png({ compressionLevel: 9 })
   .toFile(OUT);
 
 console.log(`Wrote ${OUT}`);
