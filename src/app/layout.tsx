@@ -1,6 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Instrument_Sans } from "next/font/google";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#ffffff",
+};
 
 const fraunces = Fraunces({
   variable: "--font-display",
@@ -36,8 +43,11 @@ export const metadata: Metadata = {
       "Medical billing and revenue cycle support for small and mid-sized U.S. healthcare practices.",
   },
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
-    apple: "/favicon.svg",
+    icon: [
+      { url: "/monogram.png", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/monogram.png",
   },
 };
 

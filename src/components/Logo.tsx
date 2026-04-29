@@ -12,20 +12,20 @@ const SIZES: Record<
   sm: {
     mark: "h-9 w-9",
     markPx: 36,
-    word: "text-[1.2rem]",
+    word: "text-[1.15rem] sm:text-[1.2rem]",
     gap: "gap-2.5",
   },
   md: {
-    mark: "h-12 w-12",
+    mark: "h-10 w-10 sm:h-12 sm:w-12",
     markPx: 48,
-    word: "text-[1.55rem]",
-    gap: "gap-3",
+    word: "text-[1.3rem] sm:text-[1.55rem]",
+    gap: "gap-2.5 sm:gap-3",
   },
   lg: {
-    mark: "h-16 w-16 sm:h-20 sm:w-20",
+    mark: "h-14 w-14 sm:h-20 sm:w-20",
     markPx: 80,
-    word: "text-[2rem] sm:text-[2.4rem]",
-    gap: "gap-4",
+    word: "text-[1.6rem] sm:text-[2.4rem]",
+    gap: "gap-3 sm:gap-4",
   },
 };
 

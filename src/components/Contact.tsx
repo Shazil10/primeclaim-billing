@@ -54,10 +54,10 @@ export default function Contact() {
           </div>
 
           <div className="lg:col-span-5">
-            <dl className="space-y-6 border-t border-[color:var(--hairline-strong)] pt-7">
-              <div className="grid grid-cols-12 gap-4">
-                <dt className="col-span-4 eyebrow pt-1">Email</dt>
-                <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
+            <dl className="space-y-5 sm:space-y-6 border-t border-[color:var(--hairline-strong)] pt-7">
+              <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
+                <dt className="sm:col-span-4 eyebrow sm:pt-1">Email</dt>
+                <dd className="sm:col-span-8 text-[15px] text-[color:var(--ink)] break-words">
                   <a
                     href="mailto:info@primeclaimbilling.com"
                     className="hover:text-[color:var(--accent)] transition-colors"
@@ -66,9 +66,9 @@ export default function Contact() {
                   </a>
                 </dd>
               </div>
-              <div className="grid grid-cols-12 gap-4">
-                <dt className="col-span-4 eyebrow pt-1">Phone</dt>
-                <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
+              <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
+                <dt className="sm:col-span-4 eyebrow sm:pt-1">Phone</dt>
+                <dd className="sm:col-span-8 text-[15px] text-[color:var(--ink)]">
                   <a
                     href="tel:+14059033038"
                     className="hover:text-[color:var(--accent)] transition-colors"
@@ -77,23 +77,23 @@ export default function Contact() {
                   </a>
                 </dd>
               </div>
-              <div className="grid grid-cols-12 gap-4">
-                <dt className="col-span-4 eyebrow pt-1">Office</dt>
-                <dd className="col-span-8 text-[15px] text-[color:var(--ink)] leading-[1.55]">
+              <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
+                <dt className="sm:col-span-4 eyebrow sm:pt-1">Office</dt>
+                <dd className="sm:col-span-8 text-[15px] text-[color:var(--ink)] leading-[1.55]">
                   539 W. Commerce St #6489
                   <br />
                   Dallas, TX 75208
                 </dd>
               </div>
-              <div className="grid grid-cols-12 gap-4">
-                <dt className="col-span-4 eyebrow pt-1">Web</dt>
-                <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
+              <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
+                <dt className="sm:col-span-4 eyebrow sm:pt-1">Web</dt>
+                <dd className="sm:col-span-8 text-[15px] text-[color:var(--ink)]">
                   primeclaimbilling.com
                 </dd>
               </div>
-              <div className="grid grid-cols-12 gap-4">
-                <dt className="col-span-4 eyebrow pt-1">Hours</dt>
-                <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
+              <div className="grid grid-cols-1 sm:grid-cols-12 gap-1 sm:gap-4">
+                <dt className="sm:col-span-4 eyebrow sm:pt-1">Hours</dt>
+                <dd className="sm:col-span-8 text-[15px] text-[color:var(--ink)]">
                   Monday to Friday, business hours (CT)
                 </dd>
               </div>
