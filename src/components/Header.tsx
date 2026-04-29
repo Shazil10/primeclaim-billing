@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[color:var(--paper)]/85 backdrop-blur-md border-b border-[color:var(--hairline)]">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 sm:px-8 lg:px-12 h-[4.5rem]">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 sm:px-8 lg:px-12 h-[5.25rem]">
         <Link href="#top" aria-label="PrimeClaim Billing, home">
           <Logo />
         </Link>
