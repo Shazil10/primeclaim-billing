@@ -45,10 +45,10 @@ export default function Contact() {
                 </span>
               </a>
               <a
-                href="tel:+1XXXXXXXXXX"
+                href="tel:+14059033038"
                 className="text-[14px] tracking-wide text-[color:var(--ink-muted)] hover:text-[color:var(--accent)] transition-colors"
               >
-                Or call us instead
+                Or call +1 (405) 903-3038
               </a>
             </div>
           </div>
@@ -70,11 +70,19 @@ export default function Contact() {
                 <dt className="col-span-4 eyebrow pt-1">Phone</dt>
                 <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
                   <a
-                    href="tel:+1XXXXXXXXXX"
+                    href="tel:+14059033038"
                     className="hover:text-[color:var(--accent)] transition-colors"
                   >
-                    +1 (XXX) XXX-XXXX
+                    +1 (405) 903-3038
                   </a>
+                </dd>
+              </div>
+              <div className="grid grid-cols-12 gap-4">
+                <dt className="col-span-4 eyebrow pt-1">Office</dt>
+                <dd className="col-span-8 text-[15px] text-[color:var(--ink)] leading-[1.55]">
+                  539 W. Commerce St #6489
+                  <br />
+                  Dallas, TX 75208
                 </dd>
               </div>
               <div className="grid grid-cols-12 gap-4">
@@ -86,7 +94,7 @@ export default function Contact() {
               <div className="grid grid-cols-12 gap-4">
                 <dt className="col-span-4 eyebrow pt-1">Hours</dt>
                 <dd className="col-span-8 text-[15px] text-[color:var(--ink)]">
-                  Monday to Friday, business hours (ET)
+                  Monday to Friday, business hours (CT)
                 </dd>
               </div>
             </dl>

@@ -27,8 +27,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-[color:var(--hairline)] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-[12px] text-[color:var(--ink-soft)]">
-          <p>© 2026 PrimeClaim Billing. All rights reserved.</p>
+        <div className="mt-8 pt-6 border-t border-[color:var(--hairline)] flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 text-[12px] text-[color:var(--ink-soft)]">
+          <div className="flex flex-col gap-1">
+            <p>© 2026 PrimeClaim Billing. All rights reserved.</p>
+            <p>539 W. Commerce St #6489, Dallas, TX 75208</p>
+          </div>
           <p className="italic">Medical billing &amp; revenue cycle management.</p>
         </div>
       </Container>
