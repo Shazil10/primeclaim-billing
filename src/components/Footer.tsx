@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-[color:var(--paper)] py-12 border-t border-[color:var(--hairline)]">
       <Container>
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-          <Logo />
+          <Logo size="lg" />
 
           <div className="flex flex-wrap items-center gap-x-7 gap-y-2 text-[13px] text-[color:var(--ink-muted)]">
             <a href="#services" className="hover:text-[color:var(--ink)] transition-colors">
