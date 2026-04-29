@@ -79,7 +79,7 @@ export default function Hero() {
               <span className="eyebrow">Performance-aligned</span>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-end gap-x-6 sm:gap-x-8 gap-y-4">
+            <div className="mt-6 flex flex-wrap items-center sm:items-end gap-x-6 sm:gap-x-8 gap-y-4">
               <p
                 className="font-display numeral text-[4.25rem] sm:text-[6.75rem] lg:text-[6rem] xl:text-[6.5rem] leading-[0.82] text-[color:var(--accent-deep)] tracking-[-0.04em] shrink-0"
                 style={{ fontWeight: 300 }}
