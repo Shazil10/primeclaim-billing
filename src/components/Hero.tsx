@@ -98,7 +98,7 @@ export default function Hero() {
                   collect.
                 </p>
                 <p className="mt-2.5 text-[13.5px] sm:text-[16.5px] leading-[1.5] text-[color:var(--ink-soft)]">
-                  Traditional billing partners often charge{" "}
+                  Traditional billing partners charge{" "}
                   <strong className="font-semibold text-[color:var(--ink-muted)]">6%–8%</strong>{" "}
                   of collections.
                 </p>
