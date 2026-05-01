@@ -6,12 +6,12 @@ export default function TopBar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 sm:px-8 lg:px-12 h-9 sm:h-10">
         <div className="flex items-center gap-5 sm:gap-7">
           <a
-            href="tel:+14059033038"
+            href="tel:+14159859881"
             className="flex items-center gap-2 hover:text-white transition-colors"
           >
             <PhoneSm className="opacity-80" />
             <span className="hidden sm:inline">
-              Call or text +1 (405) 903-3038
+              Call or text +1 (415) 985-9881
             </span>
             <span className="sm:hidden">Call</span>
           </a>

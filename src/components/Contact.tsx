@@ -45,10 +45,10 @@ export default function Contact() {
                 </span>
               </a>
               <a
-                href="tel:+14059033038"
+                href="tel:+14159859881"
                 className="text-[14px] tracking-wide text-[color:var(--ink-muted)] hover:text-[color:var(--accent)] transition-colors"
               >
-                Or call +1 (405) 903-3038
+                Or call +1 (415) 985-9881
               </a>
             </div>
           </div>
@@ -70,10 +70,10 @@ export default function Contact() {
                 <dt className="sm:col-span-4 eyebrow sm:pt-1">Phone</dt>
                 <dd className="sm:col-span-8 text-[15px] text-[color:var(--ink)]">
                   <a
-                    href="tel:+14059033038"
+                    href="tel:+14159859881"
                     className="hover:text-[color:var(--accent)] transition-colors"
                   >
-                    +1 (405) 903-3038
+                    +1 (415) 985-9881
                   </a>
                 </dd>
               </div>
