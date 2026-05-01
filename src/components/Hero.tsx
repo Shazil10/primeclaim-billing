@@ -87,15 +87,22 @@ export default function Hero() {
                 96.5
                 <span className="text-[color:var(--accent)]/45">%</span>
               </p>
-              <p className="flex-1 min-w-0 sm:min-w-[16rem] max-w-[30rem] text-[15.5px] sm:text-[18.5px] leading-[1.55] text-[color:var(--ink-muted)] sm:pb-3">
-                of every dollar collected stays with your practice. We
-                charge a flat{" "}
-                <span className="text-[color:var(--ink)] font-medium">
-                  3.5%
-                </span>{" "}
-                on net collections, and nothing on what we don&apos;t
-                collect.
-              </p>
+              <div className="flex-1 min-w-0 sm:min-w-[16rem] max-w-[30rem] sm:pb-3">
+                <p className="text-[15.5px] sm:text-[18.5px] leading-[1.55] text-[color:var(--ink-muted)]">
+                  of every dollar collected stays with your practice. We
+                  charge a flat{" "}
+                  <span className="text-[color:var(--ink)] font-medium">
+                    3.5%
+                  </span>{" "}
+                  on net collections, and nothing on what we don&apos;t
+                  collect.
+                </p>
+                <p className="mt-2.5 text-[13.5px] sm:text-[16.5px] leading-[1.5] text-[color:var(--ink-soft)]">
+                  Traditional billing partners often charge{" "}
+                  <strong className="font-semibold text-[color:var(--ink-muted)]">6%–8%</strong>{" "}
+                  of collections.
+                </p>
+              </div>
             </div>
 
             <ul className="mt-10 border-t border-[color:var(--accent)]/20">
